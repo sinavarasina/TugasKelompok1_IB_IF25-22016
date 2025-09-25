@@ -1,0 +1,7 @@
+Berikut disampaikan beberapa spesifikasi dalam pengumpulan Tugas Kelompok 1 (berbasis kasus):
+
+    Tugas dikerjakan secara berkelompok dengan maksimal anggota 3 mahasiswa/i;
+    Setiap kelompok diwajibkan memberikan solusi dalam bentuk program (bahasa pemrograman dibebaskan) dengan memanfatkan 2 file CSV yang telah disediakan;
+    Tugas berkaitan dengan pencarian jarak terpendek dari Cilegon ke Banyuwangi dengan memanfaatkan dua di antara algoritma berikut: Uniform Cost Search (UCS), Greedy Best First Search (GBFS) atau A*;
+    Pengumpulan dilakukan dengan membuat laporan dalam file PDF dari (i) penerapan algoritma dalam pseudo-code; (ii) penerapan algoritma dalam bahasa pemrograman (disarankan Python); serta (iii) link youtube yang berisi simulasi penggunaan program yang telah dibuat.
+    Pengumpulan laporan paling lambat dilakukan hingga hari Senin (29 September 2025) pukul 23.59 WIB.
