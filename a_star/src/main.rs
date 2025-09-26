@@ -10,7 +10,7 @@ fn main() {
     const MAP_CSV: &str =
         include_str!("../../data/Tugas Kelompok 1 - Peta Cilegon ke Banyuwangi.csv");
     const HEURISTIC_CSV: &str =
-        include_str!("../../data/Tugas Kelompok 1 - Heuristik ke Banyuwangi.csv");
+        include_str!("../../data/Tugas Kelompok 1 - Heuristik ke Banyuwangi - FIX.csv");
 
     let (graph, h_n) = deserialize_csv::load_data(MAP_CSV, HEURISTIC_CSV);
 
