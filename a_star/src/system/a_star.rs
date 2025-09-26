@@ -180,12 +180,12 @@ pub fn a_star(
             let path = reconstruct_path(&states, goal);
             let total_cost = states[goal].g;
 
-            log_if!(debug, "Goal reached\t: {}", goal);
-            log_if!(debug, "Path\t\t: {}", path.join(" -> "));
-            log_if!(debug, "Cost\t\t: {}", total_cost);
-            log_if!(debug, "Expanded\t: {}", closed_set.len());
-            log_if!(debug, "Steps\t\t: {}", step);
-            log_if!(debug, "Path Lenght\t: {}", path.len());
+            log_if!(debug, "Goal reached: {}", goal);
+            log_if!(debug, "Path        : {}", path.join(" -> "));
+            log_if!(debug, "Cost        : {}", total_cost);
+            log_if!(debug, "Expanded    : {}", closed_set.len());
+            log_if!(debug, "Steps       : {}", step);
+            log_if!(debug, "Path Lenght : {}", path.len());
 
             return Some((path, total_cost));
         }
