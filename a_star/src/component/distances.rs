@@ -1,11 +1,11 @@
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
-struct Distances {
+pub struct Distances {
     #[serde(rename = "Kota Asal")]
-    origin: String,
+    pub origin: String,
     #[serde(rename = "Kota Tujuan")]
-    destination: String,
+    pub destination: String,
     #[serde(rename = "Jarak Jalan")]
-    distances: i32,
+    pub cost: i32,
 }

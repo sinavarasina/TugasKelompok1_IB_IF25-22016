@@ -1,7 +1,9 @@
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
-struct Heuristic {
-    origin: String,
-    heuristic_value: i32,
+pub struct Heuristic {
+    #[serde(rename = "Kota Asal")]
+    pub origin: String,
+    #[serde(rename = "Heuristik ke Banyuwangi")]
+    pub heuristic_value: i32,
 }
