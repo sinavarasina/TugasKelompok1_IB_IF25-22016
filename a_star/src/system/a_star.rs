@@ -91,7 +91,14 @@ fn traverse_node(
 
         match states.get(&neighbor) {
             Some(prev) if new_g < prev.g => {
-                log_if!(debug, "{}: g updated {} -> {}", neighbor, prev.g, new_g);
+                log_if!(
+                    debug,
+                    "{}: g updated {} -> {} (via {})",
+                    neighbor,
+                    prev.g,
+                    new_g,
+                    current_city
+                );
                 states.insert(
                     neighbor.clone(),
                     State {
@@ -104,10 +111,12 @@ fn traverse_node(
             Some(prev) => {
                 log_if!(
                     debug,
-                    "{}: previous g {} is better, ignore candidate {}",
+                    "{}: previous g {} (via {}) is better, ignore g candidate {} (via {})",
                     neighbor,
                     prev.g,
-                    new_g
+                    prev.parent.as_deref().unwrap_or("START"),
+                    new_g,
+                    current_city
                 );
             }
             None => {
@@ -171,12 +180,12 @@ pub fn a_star(
             let path = reconstruct_path(&states, goal);
             let total_cost = states[goal].g;
 
-            log_if!(debug, "Goal reached: {}", goal);
-            log_if!(debug, "Path   : {}", path.join(" -> "));
-            log_if!(debug, "Cost   : {}", total_cost);
-            log_if!(debug, "Expanded: {}", closed_set.len());
-            log_if!(debug, "Steps   : {}", step);
-            log_if!(debug, "Pathlen : {}", path.len());
+            log_if!(debug, "Goal reached\t: {}", goal);
+            log_if!(debug, "Path\t\t: {}", path.join(" -> "));
+            log_if!(debug, "Cost\t\t: {}", total_cost);
+            log_if!(debug, "Expanded\t: {}", closed_set.len());
+            log_if!(debug, "Steps\t\t: {}", step);
+            log_if!(debug, "Path Lenght\t: {}", path.len());
 
             return Some((path, total_cost));
         }
