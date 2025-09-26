@@ -1,0 +1,276 @@
+A* Search Algorithm
+Initial State: Cilegon
+Goal State   : Banyuwangi
+
+Step 1
+Open  : Cilegon
+Closed: 
+Select Cilegon (g=0, h=950, f=950)
+Expand from Cilegon:
+Tangerang first arrival, g=81
+
+Step 2
+Open  : Tangerang
+Closed: Cilegon
+Select Tangerang (g=81, h=882, f=963)
+Expand from Tangerang:
+Jakarta first arrival, g=110
+
+Step 3
+Open  : Jakarta
+Closed: Cilegon, Tangerang
+Select Jakarta (g=110, h=861, f=971)
+Expand from Jakarta:
+Depok first arrival, g=135
+Bekasi first arrival, g=132
+
+Step 4
+Open  : Bekasi, Depok
+Closed: Cilegon, Jakarta, Tangerang
+Select Bekasi (g=132, h=840, f=972)
+Expand from Bekasi:
+Depok: previous g 135 (via Jakarta) is better, ignore g candidate 173 (via Bekasi)
+Indramayu first arrival, g=317
+Subang first arrival, g=227
+
+Step 5
+Open  : Depok, Indramayu, Subang
+Closed: Bekasi, Cilegon, Jakarta, Tangerang
+Select Subang (g=227, h=750, f=977)
+Expand from Subang:
+Cirebon first arrival, g=330
+
+Step 6
+Open  : Cirebon, Depok, Indramayu
+Closed: Bekasi, Cilegon, Jakarta, Subang, Tangerang
+Select Cirebon (g=330, h=662, f=992)
+Expand from Cirebon:
+Tegal first arrival, g=401
+
+Step 7
+Open  : Depok, Indramayu, Tegal
+Closed: Bekasi, Cilegon, Cirebon, Jakarta, Subang, Tangerang
+Select Depok (g=135, h=858, f=993)
+Expand from Depok:
+Bogor first arrival, g=179
+
+Step 8
+Open  : Bogor, Indramayu, Tegal
+Closed: Bekasi, Cilegon, Cirebon, Depok, Jakarta, Subang, Tangerang
+Select Tegal (g=401, h=595, f=996)
+Expand from Tegal:
+Pekalongan first arrival, g=471
+Purwokerto first arrival, g=466
+
+Step 9
+Open  : Bogor, Indramayu, Pekalongan, Purwokerto
+Closed: Bekasi, Cilegon, Cirebon, Depok, Jakarta, Subang, Tangerang, Tegal
+Select Pekalongan (g=471, h=537, f=1008)
+Expand from Pekalongan:
+Semarang first arrival, g=554
+
+Step 10
+Open  : Bogor, Indramayu, Purwokerto, Semarang
+Closed: Bekasi, Cilegon, Cirebon, Depok, Jakarta, Pekalongan, Subang, Tangerang, Tegal
+Select Semarang (g=554, h=455, f=1009)
+Expand from Semarang:
+Kudus first arrival, g=614
+Ambarawa first arrival, g=591
+
+Step 11
+Open  : Ambarawa, Bogor, Indramayu, Kudus, Purwokerto
+Closed: Bekasi, Cilegon, Cirebon, Depok, Jakarta, Pekalongan, Semarang, Subang, Tangerang, Tegal
+Select Indramayu (g=317, h=700, f=1017)
+Expand from Indramayu:
+Cirebon ignored (already in Closed)
+
+Step 12
+Open  : Ambarawa, Bogor, Kudus, Purwokerto
+Closed: Bekasi, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Pekalongan, Semarang, Subang, Tangerang, Tegal
+Select Kudus (g=614, h=416, f=1030)
+Expand from Kudus:
+Rembang first arrival, g=676
+
+Step 13
+Open  : Ambarawa, Bogor, Purwokerto, Rembang
+Closed: Bekasi, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kudus, Pekalongan, Semarang, Subang, Tangerang, Tegal
+Select Bogor (g=179, h=852, f=1031)
+Expand from Bogor:
+Sukabumi first arrival, g=236
+
+Step 14
+Open  : Ambarawa, Purwokerto, Rembang, Sukabumi
+Closed: Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kudus, Pekalongan, Semarang, Subang, Tangerang, Tegal
+Select Ambarawa (g=591, h=445, f=1036)
+Expand from Ambarawa:
+Surakarta first arrival, g=661
+
+Step 15
+Open  : Purwokerto, Rembang, Sukabumi, Surakarta
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kudus, Pekalongan, Semarang, Subang, Tangerang, Tegal
+Select Purwokerto (g=466, h=571, f=1037)
+Expand from Purwokerto:
+Cilacap first arrival, g=508
+Kebumen first arrival, g=517
+Magelang first arrival, g=573
+
+Step 16
+Open  : Cilacap, Kebumen, Magelang, Rembang, Sukabumi, Surakarta
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kudus, Pekalongan, Purwokerto, Semarang, Subang, Tangerang, Tegal
+Select Magelang (g=573, h=463, f=1036)
+Expand from Magelang:
+Ambarawa ignored (already in Closed)
+Yogyakarta first arrival, g=613
+
+Step 17
+Open  : Cilacap, Kebumen, Rembang, Sukabumi, Surakarta, Yogyakarta
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kudus, Magelang, Pekalongan, Purwokerto, Semarang, Subang, Tangerang, Tegal
+Select Kebumen (g=517, h=521, f=1038)
+Expand from Kebumen:
+Yogyakarta: g updated 613 -> 598 (via Kebumen)
+
+Step 18
+Open  : Cilacap, Rembang, Sukabumi, Surakarta, Yogyakarta
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Pekalongan, Purwokerto, Semarang, Subang, Tangerang, Tegal
+Select Yogyakarta (g=598, h=440, f=1038)
+Expand from Yogyakarta:
+Surakarta: previous g 661 (via Ambarawa) is better, ignore g candidate 673 (via Yogyakarta)
+Pacitan first arrival, g=705
+
+Step 19
+Open  : Cilacap, Pacitan, Rembang, Sukabumi, Surakarta
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Pekalongan, Purwokerto, Semarang, Subang, Tangerang, Tegal, Yogyakarta
+Select Rembang (g=676, h=373, f=1049)
+Expand from Rembang:
+Tuban first arrival, g=769
+Bojonegoro first arrival, g=779
+
+Step 20
+Open  : Bojonegoro, Cilacap, Pacitan, Sukabumi, Surakarta, Tuban
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Pekalongan, Purwokerto, Rembang, Semarang, Subang, Tangerang, Tegal, Yogyakarta
+Select Surakarta (g=661, h=396, f=1057)
+Expand from Surakarta:
+Ngawi first arrival, g=744
+
+Step 21
+Open  : Bojonegoro, Cilacap, Ngawi, Pacitan, Sukabumi, Tuban
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Pekalongan, Purwokerto, Rembang, Semarang, Subang, Surakarta, Tangerang, Tegal, Yogyakarta
+Select Pacitan (g=705, h=357, f=1062)
+Expand from Pacitan:
+Trenggalek first arrival, g=811
+
+Step 22
+Open  : Bojonegoro, Cilacap, Ngawi, Sukabumi, Trenggalek, Tuban
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Pacitan, Pekalongan, Purwokerto, Rembang, Semarang, Subang, Surakarta, Tangerang, Tegal, Yogyakarta
+Select Tuban (g=769, h=295, f=1064)
+Expand from Tuban:
+Surabaya first arrival, g=864
+
+Step 23
+Open  : Bojonegoro, Cilacap, Ngawi, Sukabumi, Surabaya, Trenggalek
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Pacitan, Pekalongan, Purwokerto, Rembang, Semarang, Subang, Surakarta, Tangerang, Tegal, Tuban, Yogyakarta
+Select Sukabumi (g=236, h=832, f=1068)
+Expand from Sukabumi:
+Bandung first arrival, g=329
+
+Step 24
+Open  : Bandung, Bojonegoro, Cilacap, Ngawi, Surabaya, Trenggalek
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Pacitan, Pekalongan, Purwokerto, Rembang, Semarang, Subang, Sukabumi, Surakarta, Tangerang, Tegal, Tuban, Yogyakarta
+Select Surabaya (g=864, h=210, f=1074)
+Expand from Surabaya:
+Sidoarjo first arrival, g=899
+
+Step 25
+Open  : Bandung, Bojonegoro, Cilacap, Ngawi, Sidoarjo, Trenggalek
+Closed: Ambarawa, Bekasi, Bogor, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Pacitan, Pekalongan, Purwokerto, Rembang, Semarang, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tegal, Tuban, Yogyakarta
+Select Bojonegoro (g=779, h=298, f=1077)
+Expand from Bojonegoro:
+Surabaya ignored (already in Closed)
+
+Step 26
+Open  : Bandung, Cilacap, Ngawi, Sidoarjo, Trenggalek
+Closed: Ambarawa, Bekasi, Bogor, Bojonegoro, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Pacitan, Pekalongan, Purwokerto, Rembang, Semarang, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tegal, Tuban, Yogyakarta
+Select Ngawi (g=744, h=334, f=1078)
+Expand from Ngawi:
+Bojonegoro ignored (already in Closed)
+Nganjuk first arrival, g=817
+
+Step 27
+Open  : Bandung, Cilacap, Nganjuk, Sidoarjo, Trenggalek
+Closed: Ambarawa, Bekasi, Bogor, Bojonegoro, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Ngawi, Pacitan, Pekalongan, Purwokerto, Rembang, Semarang, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tegal, Tuban, Yogyakarta
+Select Nganjuk (g=817, h=276, f=1093)
+Expand from Nganjuk:
+Sidoarjo: previous g 899 (via Surabaya) is better, ignore g candidate 935 (via Nganjuk)
+
+Step 28
+Open  : Bandung, Cilacap, Sidoarjo, Trenggalek
+Closed: Ambarawa, Bekasi, Bogor, Bojonegoro, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Nganjuk, Ngawi, Pacitan, Pekalongan, Purwokerto, Rembang, Semarang, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tegal, Tuban, Yogyakarta
+Select Sidoarjo (g=899, h=196, f=1095)
+Expand from Sidoarjo:
+Probolinggo first arrival, g=965
+
+Step 29
+Open  : Bandung, Cilacap, Probolinggo, Trenggalek
+Closed: Ambarawa, Bekasi, Bogor, Bojonegoro, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Nganjuk, Ngawi, Pacitan, Pekalongan, Purwokerto, Rembang, Semarang, Sidoarjo, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tegal, Tuban, Yogyakarta
+Select Probolinggo (g=965, h=132, f=1097)
+Expand from Probolinggo:
+Lumajang first arrival, g=1040
+Situbondo first arrival, g=1065
+
+Step 30
+Open  : Bandung, Cilacap, Lumajang, Situbondo, Trenggalek
+Closed: Ambarawa, Bekasi, Bogor, Bojonegoro, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Nganjuk, Ngawi, Pacitan, Pekalongan, Probolinggo, Purwokerto, Rembang, Semarang, Sidoarjo, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tegal, Tuban, Yogyakarta
+Heuristic not found for Situbondo
+Select Situbondo (g=1065, h=0, f=1065)
+Expand from Situbondo:
+Banyuwangi first arrival, g=1153
+
+Step 31
+Open  : Bandung, Banyuwangi, Cilacap, Lumajang, Trenggalek
+Closed: Ambarawa, Bekasi, Bogor, Bojonegoro, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Nganjuk, Ngawi, Pacitan, Pekalongan, Probolinggo, Purwokerto, Rembang, Semarang, Sidoarjo, Situbondo, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tegal, Tuban, Yogyakarta
+Select Cilacap (g=508, h=592, f=1100)
+Expand from Cilacap:
+Kebumen ignored (already in Closed)
+
+Step 32
+Open  : Bandung, Banyuwangi, Lumajang, Trenggalek
+Closed: Ambarawa, Bekasi, Bogor, Bojonegoro, Cilacap, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Nganjuk, Ngawi, Pacitan, Pekalongan, Probolinggo, Purwokerto, Rembang, Semarang, Sidoarjo, Situbondo, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tegal, Tuban, Yogyakarta
+Select Trenggalek (g=811, h=289, f=1100)
+Expand from Trenggalek:
+Nganjuk ignored (already in Closed)
+Kepanjen first arrival, g=925
+
+Step 33
+Open  : Bandung, Banyuwangi, Kepanjen, Lumajang
+Closed: Ambarawa, Bekasi, Bogor, Bojonegoro, Cilacap, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Nganjuk, Ngawi, Pacitan, Pekalongan, Probolinggo, Purwokerto, Rembang, Semarang, Sidoarjo, Situbondo, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tegal, Trenggalek, Tuban, Yogyakarta
+Select Bandung (g=329, h=780, f=1109)
+Expand from Bandung:
+Cirebon ignored (already in Closed)
+Tasikmalaya first arrival, g=412
+
+Step 34
+Open  : Banyuwangi, Kepanjen, Lumajang, Tasikmalaya
+Closed: Ambarawa, Bandung, Bekasi, Bogor, Bojonegoro, Cilacap, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Nganjuk, Ngawi, Pacitan, Pekalongan, Probolinggo, Purwokerto, Rembang, Semarang, Sidoarjo, Situbondo, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tegal, Trenggalek, Tuban, Yogyakarta
+Select Tasikmalaya (g=412, h=684, f=1096)
+Expand from Tasikmalaya:
+Purwokerto ignored (already in Closed)
+Cilacap ignored (already in Closed)
+
+Step 35
+Open  : Banyuwangi, Kepanjen, Lumajang
+Closed: Ambarawa, Bandung, Bekasi, Bogor, Bojonegoro, Cilacap, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kudus, Magelang, Nganjuk, Ngawi, Pacitan, Pekalongan, Probolinggo, Purwokerto, Rembang, Semarang, Sidoarjo, Situbondo, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tasikmalaya, Tegal, Trenggalek, Tuban, Yogyakarta
+Select Kepanjen (g=925, h=197, f=1122)
+Expand from Kepanjen:
+Sidoarjo ignored (already in Closed)
+Lumajang: previous g 1040 (via Probolinggo) is better, ignore g candidate 1041 (via Kepanjen)
+
+Step 36
+Open  : Banyuwangi, Lumajang
+Closed: Ambarawa, Bandung, Bekasi, Bogor, Bojonegoro, Cilacap, Cilegon, Cirebon, Depok, Indramayu, Jakarta, Kebumen, Kepanjen, Kudus, Magelang, Nganjuk, Ngawi, Pacitan, Pekalongan, Probolinggo, Purwokerto, Rembang, Semarang, Sidoarjo, Situbondo, Subang, Sukabumi, Surabaya, Surakarta, Tangerang, Tasikmalaya, Tegal, Trenggalek, Tuban, Yogyakarta
+Select Banyuwangi (g=1153, h=0, f=1153)
+Goal reached	: Banyuwangi
+Path		: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Probolinggo -> Situbondo -> Banyuwangi
+Cost		: 1153
+Expanded	: 35
+Steps		: 36
+Path Lenght	: 17
