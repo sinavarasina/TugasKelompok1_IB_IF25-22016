@@ -1,0 +1,97 @@
+Pseudo-code A*
+
+// Data Structure
+Distances:
+    origin: String
+    destination: String
+    cost: Integer
+
+Heuristic:
+    origin: String
+    heuristic_value: Integer
+
+State:
+    g: Integer             
+    parent: Optional String 
+
+
+// Load Data (deserialize_csv)
+function load_data(map_csv, heuristic_csv):
+    graph ← empty HashMap<String, List of (String, Int)>
+    heuristic ← empty HashMap<String, Int>
+
+    for each row in map_csv (delimiter ';'):
+        edge ← parse Distances
+        graph[edge.origin].append( (edge.destination, edge.cost) )
+
+    for each row in heuristic_csv (delimiter ';'):
+        h ← parse Heuristic
+        heuristic[h.origin] ← h.heuristic_value
+
+    return (graph, heuristic)
+
+
+// A* Search Algorithm
+function a_star(graph, heuristic_map, start, goal, debug):
+    open_set ← { start }
+    closed_set ← { }
+    states ← HashMap
+    states[start] ← State(g = 0, parent = None)
+
+    step ← 0
+
+    while open_set not empty:
+        step ← step + 1
+
+        current ← node in open_set with lowest (g + h)
+                  where g = states[node].g
+                        h = heuristic_map[node] (default 0)
+
+        if current == goal:
+            path ← reconstruct_path(states, goal)
+            total_cost ← states[goal].g
+            return (path, total_cost)
+
+        remove current from open_set
+        add current to closed_set
+
+        for each (neighbor, step_cost) in graph[current]:
+            if neighbor in closed_set:
+                continue
+
+            new_g ← states[current].g + step_cost
+
+            if neighbor not in states OR new_g < states[neighbor].g:
+                states[neighbor] ← State(g = new_g, parent = current)
+                add neighbor to open_set
+
+    return None
+
+
+// Reconstruct Path
+function reconstruct_path(states, goal):
+    path ← [goal]
+    cur ← goal
+
+    while states[cur].parent exists:
+        parent ← states[cur].parent
+        path.append(parent)
+        cur ← parent
+
+    reverse(path)
+    return path
+
+
+Main Program
+INITIAL_STATE ← "Cilegon"
+GOAL_STATE ← "Banyuwangi"
+DEBUG ← true
+
+MAP_CSV ← load from "Peta Cilegon ke Banyuwangi.csv"
+HEURISTIC_CSV ← load from "Heuristik ke Banyuwangi.csv"
+
+(graph, heuristic) ← load_data(MAP_CSV, HEURISTIC_CSV)
+
+(path, cost) ← a_star(graph, heuristic, INITIAL_STATE, GOAL_STATE, DEBUG)
+
+
