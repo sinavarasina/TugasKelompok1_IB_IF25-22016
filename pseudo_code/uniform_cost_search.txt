@@ -1,0 +1,90 @@
+BEGIN
+    graph ← BuildGraph()
+    
+    frontier ← PriorityQueue()  // Min-heap by cost
+    frontier.insert(Node{kota: "Cilegon", cost: 0, path: ["Cilegon"]})
+    
+    visited ← Dictionary()  // kota → minimum_cost
+    goal ← "Banyuwangi"
+    
+    WHILE frontier is not empty DO
+        
+        frontier.sortByCost()
+        current ← frontier.removeMin()
+        
+        PRINT "Jalur:", current.path
+        PRINT "Total jarak:", current.cost
+        
+        IF current.kota = goal THEN
+            PRINT "Sampai di goal:", goal
+            PRINT "Jalur optimal:", current.path
+            PRINT "Total jarak optimal:", current.cost
+            RETURN current  // Solution found
+        END IF
+        
+        IF current.kota EXISTS IN visited AND 
+           visited[current.kota] ≤ current.cost THEN
+            PRINT "Skip! (sudah dikunjungi dengan cost lebih baik)"
+            CONTINUE  // Skip this node
+        END IF
+        
+        visited[current.kota] ← current.cost
+        
+        FOR EACH tetangga IN graph[current.kota] DO
+            newCost ← current.cost + tetangga.jarak
+            newPath ← current.path + [tetangga.tujuan]
+            
+            newNode ← Node{
+                kota: tetangga.tujuan,
+                cost: newCost,
+                path: newPath
+            }
+            
+            frontier.insert(newNode)
+        END FOR
+        
+        PRINT ""  // Separator
+        SLEEP(2000)  // Visualization delay
+        
+    END WHILE
+    
+    PRINT "Tidak ada jalur ke tujuan!"
+    RETURN null
+    
+END ALGORITHM
+
+// Component
+FUNCTION BuildGraph():
+BEGIN
+    data ← ParseCSV("Tugas Kelompok 1 - Peta Cilegon ke Banyuwangi.csv")
+    graph ← Dictionary()
+    
+    FOR EACH row IN data DO
+        asal ← row["Kota Asal"]
+        tujuan ← row["Kota Tujuan"] 
+        jarak ← parseInt(row["Jarak Jalan"])
+        
+        IF asal NOT IN graph THEN
+            graph[asal] ← []
+        END IF
+        IF tujuan NOT IN graph THEN
+            graph[tujuan] ← []
+        END IF
+        
+        graph[asal].append({tujuan: tujuan, jarak: jarak})
+        graph[tujuan].append({tujuan: asal, jarak: jarak})
+    END FOR
+    
+    RETURN graph
+END FUNCTION
+
+FUNCTION ParseCSV(filename):
+BEGIN
+    csvContent ← ReadFile(filename)
+    data ← Parse(csvContent, {
+        skipFirstRow: true,
+        separator: ";",
+        stripWhitespace: true
+    })
+    RETURN data
+END FUNCTION

@@ -1,0 +1,373 @@
+Jalur: Cilegon
+Total jarak: 0
+
+Jalur: Cilegon -> Tangerang
+Total jarak: 81
+
+Jalur: Cilegon -> Tangerang -> Jakarta
+Total jarak: 110
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi
+Total jarak: 132
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok
+Total jarak: 135
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Tangerang
+Total jarak: 139
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Jakarta
+Total jarak: 154
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Jakarta
+Total jarak: 160
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Cilegon
+Total jarak: 162
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Depok
+Total jarak: 173
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bekasi
+Total jarak: 176
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor
+Total jarak: 179
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Depok
+Total jarak: 223
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang
+Total jarak: 227
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi
+Total jarak: 236
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bogor
+Total jarak: 293
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Indramayu
+Total jarak: 317
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Bekasi
+Total jarak: 322
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bandung
+Total jarak: 329
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon
+Total jarak: 330
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Indramayu -> Cirebon
+Total jarak: 373
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Indramayu
+Total jarak: 386
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal
+Total jarak: 401
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bandung -> Tasikmalaya
+Total jarak: 412
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bandung -> Sukabumi
+Total jarak: 422
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Subang
+Total jarak: 433
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bandung -> Cirebon
+Total jarak: 435
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Bandung
+Total jarak: 436
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto
+Total jarak: 466
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan
+Total jarak: 471
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Cirebon
+Total jarak: 472
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bandung -> Tasikmalaya -> Bandung
+Total jarak: 495
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Indramayu -> Bekasi
+Total jarak: 502
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bandung -> Tasikmalaya -> Cilacap
+Total jarak: 508
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Cilacap
+Total jarak: 508
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen
+Total jarak: 517
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bandung -> Tasikmalaya -> Purwokerto
+Total jarak: 525
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Tegal
+Total jarak: 531
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Tegal
+Total jarak: 541
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bandung -> Tasikmalaya -> Cilacap -> Purwokerto
+Total jarak: 550
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang
+Total jarak: 554
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Purwokerto
+Total jarak: 568
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Magelang
+Total jarak: 573
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bandung -> Tasikmalaya -> Cilacap -> Kebumen
+Total jarak: 578
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Tasikmalaya
+Total jarak: 579
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Cilacap
+Total jarak: 587
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa
+Total jarak: 591
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta
+Total jarak: 598
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Depok -> Bogor -> Sukabumi -> Bandung -> Tasikmalaya -> Cilacap -> Tasikmalaya
+Total jarak: 604
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Magelang -> Ambarawa
+Total jarak: 608
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Magelang -> Yogyakarta
+Total jarak: 613
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus
+Total jarak: 614
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Magelang
+Total jarak: 626
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Semarang
+Total jarak: 628
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Pekalongan
+Total jarak: 637
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Magelang
+Total jarak: 638
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Surakarta
+Total jarak: 661
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Surakarta
+Total jarak: 673
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Semarang
+Total jarak: 674
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang
+Total jarak: 676
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Kebumen
+Total jarak: 679
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Magelang -> Purwokerto
+Total jarak: 680
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Pacitan
+Total jarak: 705
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Surakarta -> Ambarawa
+Total jarak: 731
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Surakarta -> Yogyakarta
+Total jarak: 736
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Kudus
+Total jarak: 738
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Surakarta -> Ngawi
+Total jarak: 744
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban
+Total jarak: 769
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Bojonegoro
+Total jarak: 779
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Pacitan -> Trenggalek
+Total jarak: 811
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Pacitan -> Yogyakarta
+Total jarak: 812
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Surakarta -> Ngawi -> Bojonegoro
+Total jarak: 816
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Surakarta -> Ngawi -> Nganjuk
+Total jarak: 817
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Surakarta -> Ngawi -> Surakarta
+Total jarak: 827
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Bojonegoro -> Ngawi
+Total jarak: 851
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Rembang
+Total jarak: 862
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya
+Total jarak: 864
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Bojonegoro -> Rembang
+Total jarak: 882
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Bojonegoro -> Surabaya
+Total jarak: 890
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Surakarta -> Ngawi -> Nganjuk -> Ngawi
+Total jarak: 890
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Pacitan -> Trenggalek -> Nganjuk
+Total jarak: 897
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo
+Total jarak: 899
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Surakarta -> Ngawi -> Nganjuk -> Trenggalek
+Total jarak: 903
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Pacitan -> Trenggalek -> Pacitan
+Total jarak: 917
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Pacitan -> Trenggalek -> Kepanjen
+Total jarak: 925
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Surabaya
+Total jarak: 934
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Ambarawa -> Surakarta -> Ngawi -> Nganjuk -> Sidoarjo
+Total jarak: 935
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Tuban
+Total jarak: 959
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Probolinggo
+Total jarak: 965
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Bojonegoro
+Total jarak: 975
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Kepanjen
+Total jarak: 1007
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Nganjuk
+Total jarak: 1017
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Probolinggo -> Sidoarjo
+Total jarak: 1031
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Pacitan -> Trenggalek -> Kepanjen -> Sidoarjo
+Total jarak: 1033
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Pacitan -> Trenggalek -> Kepanjen -> Trenggalek
+Total jarak: 1039
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Probolinggo -> Lumajang
+Total jarak: 1040
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Purwokerto -> Kebumen -> Yogyakarta -> Pacitan -> Trenggalek -> Kepanjen -> Lumajang
+Total jarak: 1041
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Probolinggo -> Situbondo
+Total jarak: 1065
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Probolinggo -> Lumajang -> Jem
+ber
+Total jarak: 1105
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Probolinggo -> Lumajang -> Pro
+bolinggo
+Total jarak: 1115
+Skip!
+
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Probolinggo -> Situbondo -> Ba
+nyuwangi
+Total jarak: 1153
+
+Sampai di goal: Banyuwangi
+Jalur: Cilegon -> Tangerang -> Jakarta -> Bekasi -> Subang -> Cirebon -> Tegal -> Pekalongan -> Semarang -> Kudus -> Rembang -> Tuban -> Surabaya -> Sidoarjo -> Probolinggo -> Situbondo -> Ba
+nyuwangi
+Total jarak: 1153
