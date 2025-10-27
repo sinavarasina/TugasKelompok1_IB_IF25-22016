@@ -1,3 +1,52 @@
+def select_unassigned_variable_degree():
+    """Degree Heuristic: Select variable with most constraints on remaining variables"""
+    unassigned = [v for v in variables if v not in assignment]
+    print("Belum diassign: ", unassigned)
+    
+    if not unassigned:
+        return None
+    
+    # Define constraints between variables
+    constraints_graph = {
+        "Ani": ["Budi"],           # Ani has constraint with Budi
+        "Budi": ["Ani"],           # Budi has constraint with Ani
+        "Citra": ["Dedi"],         # Citra must be with Dedi
+        "Dedi": ["Citra"],         # Dedi must be with Citra
+        "Eka": []                  # Eka has no direct binary constraints
+    }
+    
+    degree_var = None
+    max_degree = -1
+    
+    print("Check degree (constraints with unassigned variables):")
+    for var in unassigned:
+        # Count how many unassigned variables this var has constraints with
+        degree = 0
+        for constrained_var in constraints_graph[var]:
+            if constrained_var in unassigned:
+                degree += 1
+        
+        print(f"{var}: degree = {degree}")
+        
+        if degree > max_degree:
+            max_degree = degree
+            degree_var = var
+    
+    print(f"→ Selected {degree_var} (Degree with {max_degree} constraints)")
+    return degree_var
+
+
+variables = ["Ani", "Budi", "Citra", "Dedi", "Eka"]
+domains = {
+    "Ani": [0, 1],
+    "Budi": [0, 1],
+    "Citra": [0, 1],
+    "Dedi": [0, 1],
+    "Eka": [0, 1]
+}
+assignment = {}
+backtrack_count = 0
+steps = 0
 
 def is_consistent(var, value):
     if var == "Ani" and "Budi" in assignment:
@@ -41,29 +90,6 @@ def get_legal_values(var):
             legal.append(value)
     return legal
 
-def select_unassigned_variable():
-    """MRV Heuristic: Select variable with minimum remaining values"""
-    unassigned = [v for v in variables if v not in assignment]
-    print("Belum diassign: ",unassigned)
-    
-    if not unassigned:
-        return None
-    
-    mrv_var = None
-    min_remaining = float('inf')
-    
-    print("Check value yg tersisa:")
-    for var in unassigned:
-        legal_values = get_legal_values(var)
-        remaining = len(legal_values)
-        
-        print(f"{var}: {remaining} legal values {legal_values}")
-        if remaining < min_remaining:
-            min_remaining = remaining
-            mrv_var = var
-    
-    print(f"→ Selected {mrv_var} (MRV with {min_remaining} values)")
-    return mrv_var
 
 def order_domain_values(var):
     legal_values = get_legal_values(var)
@@ -88,7 +114,7 @@ def backtrack():
     
     print(f"\nStep {steps}:")
     print(f"Current assignment: {assignment}")
-    var = select_unassigned_variable()
+    var = select_unassigned_variable_degree()
     
     if var is None:
         return is_complete_valid()
@@ -97,12 +123,13 @@ def backtrack():
         print(f"Trying {var} = Class {value}")
         
         assignment[var] = value
+        
         result = backtrack()
         
         if result:
             return True
         
-        print(f"\n!!!!Backtracking from {var} = Class {value}")
+        print(f"✗ Backtracking from {var} = Class {value}")
         backtrack_count += 1
         del assignment[var]
     
@@ -127,19 +154,7 @@ def solve():
     
     return result
 
-#Ini adalah variabel global
-variables = ["Ani", "Budi", "Citra", "Dedi", "Eka"]
-domains = {
-    "Ani": [0, 1],
-    "Budi": [0, 1],
-    "Citra": [0, 1],
-    "Dedi": [0, 1],
-    "Eka": [0, 1]
-}
-assignment = {}
-backtrack_count = 0
-steps = 0
-def MRV():
+def Degree_Heuristic():
     global assignment, backtrack_count, steps
     
     assignment = {}
