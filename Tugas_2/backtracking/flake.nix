@@ -18,7 +18,7 @@
     in
       pkgs.mkShell {
         packages = with pkgs; [
-          go
+          python314
         ];
 
         shellHook = ''
