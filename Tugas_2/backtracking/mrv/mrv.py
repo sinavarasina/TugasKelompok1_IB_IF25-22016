@@ -1,3 +1,25 @@
+def select_unassigned_variable():
+    unassigned = [v for v in variables if v not in assignment]
+    print("Belum diassign: ",unassigned)
+    
+    if not unassigned:
+        return None
+    
+    mrv_var = None
+    min_remaining = float('inf')
+    
+    print("Check value yg tersisa:")
+    for var in unassigned:
+        legal_values = get_legal_values(var)
+        remaining = len(legal_values)
+        
+        print(f"{var}: {remaining} legal values {legal_values}")
+        if remaining < min_remaining:
+            min_remaining = remaining
+            mrv_var = var
+    
+    print(f"→ Selected {mrv_var} (MRV with {min_remaining} values)")
+    return mrv_var
 
 def is_consistent(var, value):
     if var == "Ani" and "Budi" in assignment:
@@ -41,30 +63,6 @@ def get_legal_values(var):
             legal.append(value)
     return legal
 
-def select_unassigned_variable():
-    """MRV Heuristic: Select variable with minimum remaining values"""
-    unassigned = [v for v in variables if v not in assignment]
-    print("Belum diassign: ",unassigned)
-    
-    if not unassigned:
-        return None
-    
-    mrv_var = None
-    min_remaining = float('inf')
-    
-    print("Check value yg tersisa:")
-    for var in unassigned:
-        legal_values = get_legal_values(var)
-        remaining = len(legal_values)
-        
-        print(f"{var}: {remaining} legal values {legal_values}")
-        if remaining < min_remaining:
-            min_remaining = remaining
-            mrv_var = var
-    
-    print(f"→ Selected {mrv_var} (MRV with {min_remaining} values)")
-    return mrv_var
-
 def order_domain_values(var):
     legal_values = get_legal_values(var)
     
@@ -80,6 +78,7 @@ def backtrack():
     
     steps += 1
     
+    #cek apakah variabel sudah diassign semua
     if len(assignment) == len(variables):
         if is_complete_valid():
             return True
@@ -90,6 +89,7 @@ def backtrack():
     print(f"Current assignment: {assignment}")
     var = select_unassigned_variable()
     
+    #cek jika var sudah habis
     if var is None:
         return is_complete_valid()
     
@@ -112,7 +112,7 @@ def solve():
     result = backtrack()
     
     if result:
-        print("\n============SOLUTION=============\n")
+        print("\nSolusin = \n")
         
         kelas = [[], []]
         for student, class_num in assignment.items():
@@ -122,7 +122,7 @@ def solve():
         print(f"Class 1: {kelas[1]} ({len(kelas[1])} members)")
         
     else:
-        print("✗ NO SOLUTION EXISTS!")
+        print("Tidak ada solusi!")
         print("=" * 60)
     
     return result
