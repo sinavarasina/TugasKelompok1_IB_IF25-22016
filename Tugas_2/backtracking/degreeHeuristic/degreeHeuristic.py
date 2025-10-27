@@ -1,26 +1,26 @@
-def select_unassigned_variable_degree():
-    """Degree Heuristic: Select variable with most constraints on remaining variables"""
-    unassigned = [v for v in variables if v not in assignment]
+import global_data as gd
+
+#menggunakan degree heuristic untuk memilih data yg belum diassign
+def select_unassigned_variable_heuristic_degree():
+    unassigned = [v for v in gd.variables if v not in gd.assignment]
     print("Belum diassign: ", unassigned)
     
     if not unassigned:
         return None
     
-    # Define constraints between variables
     constraints_graph = {
-        "Ani": ["Budi"],           # Ani has constraint with Budi
-        "Budi": ["Ani"],           # Budi has constraint with Ani
-        "Citra": ["Dedi"],         # Citra must be with Dedi
-        "Dedi": ["Citra"],         # Dedi must be with Citra
-        "Eka": []                  # Eka has no direct binary constraints
+        "Ani": ["Budi"],
+        "Budi": ["Ani"],
+        "Citra": ["Dedi"],
+        "Dedi": ["Citra"],
+        "Eka": []
     }
     
     degree_var = None
     max_degree = -1
     
-    print("Check degree (constraints with unassigned variables):")
+    # intinya mengecek seluruh variabel yang belum diassign memiliki berapa constraints
     for var in unassigned:
-        # Count how many unassigned variables this var has constraints with
         degree = 0
         for constrained_var in constraints_graph[var]:
             if constrained_var in unassigned:
@@ -36,41 +36,29 @@ def select_unassigned_variable_degree():
     return degree_var
 
 
-variables = ["Ani", "Budi", "Citra", "Dedi", "Eka"]
-domains = {
-    "Ani": [0, 1],
-    "Budi": [0, 1],
-    "Citra": [0, 1],
-    "Dedi": [0, 1],
-    "Eka": [0, 1]
-}
-assignment = {}
-backtrack_count = 0
-steps = 0
-
 def is_consistent(var, value):
-    if var == "Ani" and "Budi" in assignment:
-        if assignment["Budi"] == value:
+    if var == "Ani" and "Budi" in gd.assignment:
+        if gd.assignment["Budi"] == value:
             return False
-    if var == "Budi" and "Ani" in assignment:
-        if assignment["Ani"] == value:
+    if var == "Budi" and "Ani" in gd.assignment:
+        if gd.assignment["Ani"] == value:
             return False
     
-    if var == "Citra" and "Dedi" in assignment:
-        if assignment["Dedi"] != value:
+    if var == "Citra" and "Dedi" in gd.assignment:
+        if gd.assignment["Dedi"] != value:
             return False
-    if var == "Dedi" and "Citra" in assignment:
-        if assignment["Citra"] != value:
+    if var == "Dedi" and "Citra" in gd.assignment:
+        if gd.assignment["Citra"] != value:
             return False
     
     return True
 
 def is_complete_valid():
-    if len(assignment) != len(variables):
+    if len(gd.assignment) != len(gd.variables):
         return False
     
     kelas = [[], []]
-    for student, class_num in assignment.items():
+    for student, class_num in gd.assignment.items():
         kelas[class_num].append(student)
     
     for i in range(2):
@@ -85,53 +73,53 @@ def is_complete_valid():
 
 def get_legal_values(var):
     legal = []
-    for value in domains[var]:
+    for value in gd.domains[var]:
         if is_consistent(var, value):
             legal.append(value)
     return legal
 
-
 def order_domain_values(var):
     legal_values = get_legal_values(var)
     
-    if var == "Citra" and "Dedi" in assignment:
-        return [assignment["Dedi"]]
-    if var == "Dedi" and "Citra" in assignment:
-        return [assignment["Citra"]]
+    if var == "Citra" and "Dedi" in gd.assignment:
+        return [gd.assignment["Dedi"]]
+    if var == "Dedi" and "Citra" in gd.assignment:
+        return [gd.assignment["Citra"]]
     
     return legal_values
 
 def backtrack():
     global backtrack_count, steps
     
-    steps += 1
+    gd.steps += 1
     
-    if len(assignment) == len(variables):
+    #cek apakah variabel sudah diassign semua
+    if len(gd.assignment) == len(gd.variables):
         if is_complete_valid():
             return True
         else:
             return False
     
-    print(f"\nStep {steps}:")
-    print(f"Current assignment: {assignment}")
-    var = select_unassigned_variable_degree()
+    print(f"\nStep {gd.steps}:")
+    print(f"Current assignment: {gd.assignment}")
+    var = select_unassigned_variable_heuristic_degree()
     
+    #cek jika var sudah habis
     if var is None:
         return is_complete_valid()
     
     for value in order_domain_values(var):
         print(f"Trying {var} = Class {value}")
         
-        assignment[var] = value
-        
+        gd.assignment[var] = value
         result = backtrack()
         
         if result:
             return True
         
-        print(f"✗ Backtracking from {var} = Class {value}")
-        backtrack_count += 1
-        del assignment[var]
+        print(f"\n!!!!Backtracking from {var} = Class {value}")
+        gd.backtrack_count += 1
+        del gd.assignment[var]
     
     return False
 
@@ -139,26 +127,24 @@ def solve():
     result = backtrack()
     
     if result:
-        print("\n============SOLUTION=============\n")
+        print("\nSolusin = \n")
         
         kelas = [[], []]
-        for student, class_num in assignment.items():
+        for student, class_num in gd.assignment.items():
             kelas[class_num].append(student)
         
         print(f"Class 0: {kelas[0]} ({len(kelas[0])} members)")
         print(f"Class 1: {kelas[1]} ({len(kelas[1])} members)")
         
     else:
-        print("✗ NO SOLUTION EXISTS!")
+        print("Tidak ada solusi!")
         print("=" * 60)
     
     return result
 
 def Degree_Heuristic():
-    global assignment, backtrack_count, steps
-    
-    assignment = {}
-    backtrack_count = 0
-    steps = 0
+    gd.assignment = {}
+    gd.backtrack_count = 0
+    gd.steps = 0
     
     solve()
