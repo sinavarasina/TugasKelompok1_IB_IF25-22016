@@ -16,7 +16,7 @@ def main():
     parser.add_argument(
         "algo",
         choices=["hill", "anneal", "both"],
-        help="hill (Hill Climbing), anneal (Simulated Annealing), or both"
+        help="algorithm : hill (Hill Climbing), anneal (Simulated Annealing), or both"
     )
     parser.add_argument("--verbose", action="store_true",
                         help="show the every step of algorithm")
