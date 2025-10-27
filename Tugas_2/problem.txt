@@ -1,0 +1,23 @@
+CSP: Pembagian Tugas Kelompok
+Di sebuah mata kuliah kecerdasan buatan, terdapat 5 mahasiswa yaitu: Ani, Budi, Citra, Dedi,
+dan Eka. Mereka harus dibagi ke dalam 2 kelompok proyek (Kelompok 1 (K1) dan
+Kelompok 2 (K2)). Akan tetapi, terdapat beberapa aturan (constraint) yang harus dipatuhi:
+1. Ani dan Budi tidak boleh berada dalam kelompok yang sama karena sering terjadi
+konflik.
+2. Citra harus berada di kelompok yang sama dengan Dedi karena mereka sudah
+menyiapkan materi bersama.
+3. Eka tidak boleh sendirian di dalam kelompok (harus ada teman minimal 1 orang).
+4. Setiap kelompok harus berisi minimal 2 mahasiswa.
+Pertanyaan : Bagaimana pembagian mahasiswa ke dalam 2 kelompok tersebut sehingga
+semua aturan dapat terpenuhi?
+Petunjuk
+a. Representasikan masalah ini sebagai Constraint Satisfaction Problem (CSP) dengan:
+· Variabel: {Ani, Budi, Citra, Dedi, Eka}
+· Domain: {K1, K2} untuk masing-masing variabel
+Constraints: sesuai 4 aturan di atas
+b. Metode yang diminta:
+1. Selesaikan dengan Backtracking Search yang menggunakan strategi efisiensi seperti
+MRV, Degree Heuristic, dan Forward-Checking.
+2. Selesaikan juga dengan Local Search dengan Hill Climbing dan Simulated Annealing
+untuk menemukan solusi cepat.
+3. Bandingkan hasil kedua metode.
