@@ -115,7 +115,7 @@ def solve():
     result = backtrack()
     
     if result:
-        print("\nSolusin = \n")
+        print("\nSolusi= \n")
         
         kelas = [[], []]
         for student, class_num in gd.assignment.items():
