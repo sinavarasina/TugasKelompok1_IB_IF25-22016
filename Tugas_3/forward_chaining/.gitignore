@@ -1,0 +1,42 @@
+# Binaries
+forward
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go build artifacts
+/bin/
+/build/
+/dist/
+*.a
+
+# Dependency directories
+/vendor/
+/Godeps/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Coverage files
+*.cover
+*.coverprofile
+coverage.out
+
+# Local environment
+.env
