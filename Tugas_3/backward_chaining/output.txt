@@ -1,0 +1,47 @@
+make run
+g++ -std=c++23 -Wall -Wextra -Wpedantic -O3  main.cpp rules.cpp -o backward_chaining 
+./backward_chaining
+== Mulai backward chaining untuk goal: Ganti Aki
+Buktikan goal: Ganti Aki
+Conflict set (RHS == Ganti Aki):
+  R4: IF Aki Lemah AND Tidak Ada Karat pada Terminal THEN Ganti Aki
+Urutan kandidat (RuleOrder > Spesifisitas > ID):
+  R4 [prioRank=3, spec=2]
+Coba R4 untuk mencapai Ganti Aki:
+  Premis: Aki Lemah
+  Premis 2: Tidak Ada Karat pada Terminal (operator AND)
+  Buktikan goal: Aki Lemah
+  Conflict set (RHS == Aki Lemah):
+    R2: IF Mesin Berputar Lambat THEN Aki Lemah
+    R3: IF Lampu Redup THEN Aki Lemah
+    R5: IF Suara Klik saat Start THEN Aki Lemah
+  Urutan kandidat (RuleOrder > Spesifisitas > ID):
+    R2 [prioRank=2, spec=1]
+    R3 [prioRank=2, spec=1]
+    R5 [prioRank=2, spec=1]
+  Coba R2 untuk mencapai Aki Lemah:
+    Premis: Mesin Berputar Lambat
+    Buktikan goal: Mesin Berputar Lambat
+    Tidak ada aturan menghasilkan Mesin Berputar Lambat
+    Semua kandidat gagal untuk Mesin Berputar Lambat
+    Hasil premis: FAIL
+  Gagal: R2 tidak mencukupi untuk Aki Lemah
+  Coba R3 untuk mencapai Aki Lemah:
+    Premis: Lampu Redup
+    Buktikan goal: Lampu Redup
+    Tidak ada aturan menghasilkan Lampu Redup
+    Semua kandidat gagal untuk Lampu Redup
+    Hasil premis: FAIL
+  Gagal: R3 tidak mencukupi untuk Aki Lemah
+  Coba R5 untuk mencapai Aki Lemah:
+    Premis: Suara Klik saat Start
+    Fakta terpenuhi: Suara Klik saat Start
+    Hasil premis: OK
+  Berhasil: goal Aki Lemah dicapai via R5
+  Fakta terpenuhi: Tidak Ada Karat pada Terminal
+  Hasil AND: OK & OK => OK
+Berhasil: goal Ganti Aki dicapai via R4
+== Selesai: goal Ganti Aki TERBUKTI
+[TERBUKTI] Ganti Aki
+  Jejak rule: R5 -> R4
+
