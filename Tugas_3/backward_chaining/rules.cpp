@@ -171,7 +171,7 @@ bool BCMobil::prove_dfs(Sym goal, std::vector<int> &proof_ids,
       if (verbose)
         std::print("{:{}}Hasil AND: {} & {} => {}\n", "", (depth + 1) * 2,
                    a ? "OK" : "FAIL", b ? "OK" : "FAIL", ok ? "OK" : "FAIL");
-    } else { // OR
+    } else {
       std::vector<int> snapshot = proof_ids;
       bool a = prove_dfs(r.if1Sym, proof_ids, on_path, depth + 1);
       if (a) {
