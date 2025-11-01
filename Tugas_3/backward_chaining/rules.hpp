@@ -55,18 +55,14 @@ private:
   std::unordered_set<Sym> facts;
 
   std::unordered_set<Sym> memo_ok, memo_fail;
+  std::unordered_set<u64> tried;
+  bool verbose = false;
+
   bool prove_dfs(Sym goal, std::vector<int> &proof_ids,
                  std::unordered_set<Sym> &on_path, int depth);
 
-  std::unordered_set<u64> tried;
   static u64 key(Sym g, int rid);
 
-  static int specificity(const Rule &r) {
-    if (!r.if2Sym)
-      return 1;
-    if (r.logic && *r.logic == Logic::AND)
-      return 2;
-    return 0;
-  }
-  bool verbose = false;
+  static int specificity(const Rule &r);
+  static int priority_rank(const Rule &r);
 };

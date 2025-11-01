@@ -20,6 +20,32 @@ u64 BCMobil::key(Sym g, int rid) {
   return (gg << 32) | rr;
 }
 
+int BCMobil::specificity(const Rule &r) {
+  if (!r.if2Sym)
+    return 1;
+  if (r.logic && *r.logic == Logic::AND)
+    return 2;
+  return 0;
+}
+
+int BCMobil::priority_rank(const Rule &r) {
+  int base = 0;
+  switch (r.prio) {
+  case Priority::RENDAH:
+    base = 1;
+    break;
+  case Priority::SEDANG:
+    base = 2;
+    break;
+  case Priority::TINGGI:
+    base = 3;
+    break;
+  }
+  if (r.id == 8)
+    base = 4;
+  return base;
+}
+
 bool BCMobil::prove(Sym goal, std::vector<int> &proof_ids) {
   std::unordered_set<Sym> on_path;
   proof_ids.clear();
@@ -70,10 +96,10 @@ bool BCMobil::prove_dfs(Sym goal, std::vector<int> &proof_ids,
       idx.push_back(i);
 
   if (verbose) {
-    if (idx.empty())
+    if (idx.empty()) {
       std::print("{:{}}Tidak ada aturan menghasilkan {}\n", "", depth * 2,
                  sym_name(goal));
-    else {
+    } else {
       std::print("{:{}}Conflict set (RHS == {}):\n", "", depth * 2,
                  sym_name(goal));
       for (size_t i : idx) {
@@ -91,8 +117,9 @@ bool BCMobil::prove_dfs(Sym goal, std::vector<int> &proof_ids,
   std::sort(idx.begin(), idx.end(), [&](size_t a, size_t b) {
     const Rule &A = rules[a];
     const Rule &B = rules[b];
-    if (A.id != B.id)
-      return A.id < B.id;
+    int pa = priority_rank(A), pb = priority_rank(B);
+    if (pa != pb)
+      return pa > pb;
     int sa = specificity(A), sb = specificity(B);
     if (sa != sb)
       return sa > sb;
@@ -100,11 +127,12 @@ bool BCMobil::prove_dfs(Sym goal, std::vector<int> &proof_ids,
   });
 
   if (verbose && !idx.empty()) {
-    std::print("{:{}}Urutan kandidat (RuleOrder > Spesifisitas):\n", "",
+    std::print("{:{}}Urutan kandidat (RuleOrder > Spesifisitas > ID):\n", "",
                depth * 2);
     for (size_t i : idx) {
       const Rule &r = rules[i];
-      std::print("{:{}}  R{} [spec={}]\n", "", depth * 2, r.id, specificity(r));
+      std::print("{:{}}  R{} [prioRank={}, spec={}]\n", "", depth * 2, r.id,
+                 priority_rank(r), specificity(r));
     }
   }
 
@@ -124,8 +152,8 @@ bool BCMobil::prove_dfs(Sym goal, std::vector<int> &proof_ids,
                  sym_name(goal));
       std::print("{:{}}Premis: {}\n", "", (depth + 1) * 2, sym_name(r.if1Sym));
       if (r.if2Sym) {
-        std::print("{:{}}Premis 2: {} ({} {})\n", "", (depth + 1) * 2,
-                   sym_name(*r.if2Sym), "operator",
+        std::print("{:{}}Premis 2: {} (operator {})\n", "", (depth + 1) * 2,
+                   sym_name(*r.if2Sym),
                    (r.logic && *r.logic == Logic::AND) ? "AND" : "OR");
       }
     }
@@ -136,14 +164,14 @@ bool BCMobil::prove_dfs(Sym goal, std::vector<int> &proof_ids,
       if (verbose)
         std::print("{:{}}Hasil premis: {}\n", "", (depth + 1) * 2,
                    ok ? "OK" : "FAIL");
-    } else if (r.logic.value() == Logic::AND) {
+    } else if (r.logic && *r.logic == Logic::AND) {
       bool a = prove_dfs(r.if1Sym, proof_ids, on_path, depth + 1);
       bool b = prove_dfs(*r.if2Sym, proof_ids, on_path, depth + 1);
       ok = a && b;
       if (verbose)
         std::print("{:{}}Hasil AND: {} & {} => {}\n", "", (depth + 1) * 2,
                    a ? "OK" : "FAIL", b ? "OK" : "FAIL", ok ? "OK" : "FAIL");
-    } else {
+    } else { // OR
       std::vector<int> snapshot = proof_ids;
       bool a = prove_dfs(r.if1Sym, proof_ids, on_path, depth + 1);
       if (a) {
