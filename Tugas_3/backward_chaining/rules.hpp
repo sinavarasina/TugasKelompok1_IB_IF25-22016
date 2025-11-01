@@ -1,8 +1,10 @@
 #pragma once
-#include <cstdint>
 #include <optional>
 #include <unordered_set>
 #include <vector>
+
+using u64 = unsigned long long;
+using u32 = unsigned int;
 
 enum class Sym : int {
   MESIN_MATI_TOTAL,
@@ -56,8 +58,8 @@ private:
   bool prove_dfs(Sym goal, std::vector<int> &proof_ids,
                  std::unordered_set<Sym> &on_path, int depth);
 
-  std::unordered_set<std::uint64_t> tried;
-  static std::uint64_t key(Sym g, int rid);
+  std::unordered_set<u64> tried;
+  static u64 key(Sym g, int rid);
 
   static int specificity(const Rule &r) {
     if (!r.if2Sym)

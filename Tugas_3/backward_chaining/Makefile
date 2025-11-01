@@ -4,7 +4,7 @@ CXXFLAGS := -std=c++23 -Wall -Wextra -Wpedantic -O3
 LDFLAGS  :=
 LDLIBS   :=
 
-TARGET := backward_chain
+TARGET := backward_chaining
 SRCS   := main.cpp rules.cpp
 
 .PHONY: all run clean

@@ -14,9 +14,9 @@ void BCMobil::add_rule(int id, Sym thenSym, Sym if1Sym, Priority prio) {
   add_rule(id, thenSym, if1Sym, std::nullopt, std::nullopt, prio);
 }
 
-std::uint64_t BCMobil::key(Sym g, int rid) {
-  auto gg = static_cast<std::uint64_t>(static_cast<std::uint32_t>(g));
-  auto rr = static_cast<std::uint64_t>(static_cast<std::uint32_t>(rid));
+u64 BCMobil::key(Sym g, int rid) {
+  auto gg = static_cast<u64>(static_cast<u32>(g));
+  auto rr = static_cast<u64>(static_cast<u32>(rid));
   return (gg << 32) | rr;
 }
 
